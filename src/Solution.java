@@ -1,10 +1,13 @@
 class Solution {
-    public int solution(int age) {
+    public int solution(int num1, int num2) {
         int answer = 0;
 
         /* 알고리즘 */
-        if (age>0 && age<=120) {
-            answer = 2022 - age + 1;
+        if ((num1 >= 0 && num1 <= 10000) && (num2 >= 0 && num2 <= 10000)) {
+            if (num1 == num2) {
+                answer = 1;
+            }
+            answer = -1;
         }
 
         return answer;
