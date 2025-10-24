@@ -3,8 +3,8 @@ class Solution {
         int answer = 0;
 
         /* 알고리즘 */
-        if ((num1>=0 && num1<=100) && (num2>=0 && num2<=100)) {
-            answer = num1 * num2;
+        if ((num1>0 && num1<=100) && (num2>0 && num2<=100)) {
+            answer = num1 / num2;
         }
 
         return answer;
