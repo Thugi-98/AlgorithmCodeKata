@@ -1,9 +1,15 @@
 class Solution {
-    public int solution(int num1, int num2) {
+    public int solution(int angle) {
         int answer = 0;
 
-        if ((num1 > 0 && num1 <= 100) && (num2 > 0 && num2 <= 100))
-            answer = num1 / num2 * 1000;
+        if (angle > 0 && angle < 90)
+            answer = 1;
+        else if (angle == 90)
+            answer = 2;
+        else if (angle > 90 && angle < 180)
+            answer = 3;
+        else if (angle == 180)
+            answer = 4;
 
         return answer;
     }
