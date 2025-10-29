@@ -1,14 +1,9 @@
 class Solution {
     public int solution(int num1, int num2) {
-        int answer = 0;
+        int answer = -1;
 
-        /* 알고리즘 */
-        if ((num1 >= 0 && num1 <= 10000) && (num2 >= 0 && num2 <= 10000)) {
-            if (num1 == num2) {
-                answer = 1;
-            }
-            answer = -1;
-        }
+        if ((num1 >= -50000 && num1 <= 50000) && (num2 >= -50000 && num2 <= 50000))
+            answer = num1 + num2;
 
         return answer;
     }
