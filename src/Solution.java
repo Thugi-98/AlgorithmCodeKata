@@ -1,20 +1,20 @@
-class Solution {
-    public double solution(int[] arr) {
-        double answer = 0;
+import java.util.*;
+
+public class Solution {
+    public int solution(int n) {
+        int answer = 0;
         int sum = 0;
-        int i;
 
-        if (arr.length >= 1 && arr.length <= 100) {
-            for (i = 0; i < arr.length; i++) {
-
-                if (arr[i] >= -10000 && arr[i] <= 10000) {
-                    sum += arr[i];
-                } else throw new RuntimeException("배열 값이 범위를 벗어났습니다.");
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        if (n > 0 && n <= 100000000) {
+            for (int i = 1; i <= 100000000;) {
+                sum += (n / i) % 10;
+                i *= 10;
             }
+        }
+        answer = sum;
 
-        } else throw new RuntimeException("배열 길이가 범위를 벗어났습니다.");
-
-        answer = (double) sum / i;
+        System.out.println("answer = " + answer);
 
         return answer;
     }
