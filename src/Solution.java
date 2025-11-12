@@ -1,13 +1,15 @@
 class Solution {
-    public int solution(int n) {
-        int answer = 0;
+    public long[] solution(int x, int n) {
+        long[] answer = {};
+        answer = new long[n];
+        int ans = x;
 
-        if (n >= 3 && n <= 1000000) {
-            for (int i = n; i > 0; i--) {
-                if (n % i == 1) answer = i;
+        if (n > 0) {
+            for (int i = 0; i < n; i++) {
+                answer[i] = ans;
+                ans += x;
             }
-        }
-
+        } else throw new RuntimeException("n이 자연수가 아닙니다.");
         return answer;
     }
 }
